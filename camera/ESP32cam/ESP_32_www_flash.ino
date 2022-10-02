@@ -30,16 +30,10 @@
 
 #include "camera_pins.h"
 
-const char* ssid = "ZTE-U6EY9Y";
-const char* password = "djf9f5pt6pnc";
+const char* ssid = "camera_pins";
+const char* password = "camera_pins";
 
-//IPAddress local_IP(192, 168, 1, 198); //red wrover
-//IPAddress local_IP(192, 168, 1, 197); //black , CAMERA_MODEL_AI_THINKER
-//IPAddress local_IP(192, 168, 1, 195); //green, wrover, seknute kraje
-IPAddress local_IP(192, 168, 1, 196); //yellow, CAMERA_MODEL_AI_THINKER, nejde 5V vstup :(
-//IPAddress local_IP(192, 168, 1, 193); //ESP32s usb_
-IPAddress gateway(192, 168, 1, 1);
-IPAddress subnet(255, 255, 255, 0);
+IPAddress local_IP(192, 168, 1, 1); //red wrover
 
 
 void startCameraServer();
