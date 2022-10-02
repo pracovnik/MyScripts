@@ -5,7 +5,7 @@ Host blackberry
     ServerAliveInterval 15
     ServerAliveCountMax 3
     IdentityFile /home/yetto/.ssh/yetto_key
-    RemoteForward 11011 localhost:22
+    RemoteForward 72022 localhost:22
     ExitOnForwardFailure yes
     StrictHostKeyChecking no
     UserKnownHostsFile=/dev/null
