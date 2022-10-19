@@ -1,3 +1,7 @@
+docker stop webcam1
+docker rm -f webcam1
+
+
 docker run \
     --detach \
     --name webcam1 \
