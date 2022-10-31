@@ -5,7 +5,7 @@ docker rm -f webcam2
 docker run \
     --detach \
     --name webcam2 \
-    --device "/dev/v4l/by-id/usb-046d_0825_9F83CFA0-video-index0:/dev/video0" \
+    --device "/dev/v4l/by-id/usb-Microsoft_Microsoft®_LifeCam_Cinema_TM_-video-index0:/dev/video0" \
     --entrypoint mjpg_streamer \
     -p 18082:8080 \
     kvaps/mjpg-streamer \
