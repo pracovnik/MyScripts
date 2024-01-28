@@ -15,3 +15,5 @@ docker run \
 
 # get uniqu ID of the device as /dev/videoX changes
 # ls -all /dev/v4l/by-id/
+
+docker start webcam1
