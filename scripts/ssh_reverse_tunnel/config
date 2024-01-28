@@ -1,0 +1,11 @@
+Host blackberry
+    User yetto
+    HostName yetto.cn
+    Port 11011
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+    IdentityFile /home/yetto/.ssh/yetto_key
+    RemoteForward 72022 localhost:22
+    ExitOnForwardFailure yes
+    StrictHostKeyChecking no
+    UserKnownHostsFile=/dev/null
