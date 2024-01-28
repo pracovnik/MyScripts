@@ -1,0 +1,41 @@
+uses crt, Graph;
+
+var
+kon,xa,ya:Integer;
+ux,u4,u2,u8,u6:integer;
+ q:char;
+begin
+ xa:= Detect;
+InitGraph(xa,ya,' ');
+xa:=340;ya:=240;kon:=0;
+u2:=0;u4:=0;
+u6:=0;u8:=0;
+repeat
+ repeat
+setfillstyle(1,white);
+bar(xa,ya,xa+10,ya+10);
+ delay(20);
+ setfillstyle(1,black);
+bar(xa,ya,xa+10,ya+10);
+
+if kon>=10 then kon:=0;
+kon:=kon+1;
+if kon=5 then
+begin
+if ux>0 then ux:=ux-1;
+if ux<0 then ux:=ux+1;
+if u4<>0 then u4:=u4-1;
+if u6<>0 then u6:=u6-1;
+if u8<>0 then u8:=u8-1;
+xa:=xa-u4+u6;
+ya:=ya-u8+u2+2;
+end;
+ until keypressed;
+q:=readkey;
+if q='4' then u4:=u4+2;
+if q='6' then u6:=u6+2;
+if q='8' then u8:=u8+2;
+if q='2' then u2:=u2+1;
+if q='5' then begin u4:=0;u6:=0;end;
+until q=#27;
+ end.
