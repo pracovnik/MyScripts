@@ -12,5 +12,5 @@ Complex:
 
 Simpler:
 1. Take nutrilon for newborn.
-2. Add a holder around it for a mini chip, button and small LCD
-6. Show a number on LCD when was last time triggered (minute countdown)
+2. Add a holder around it(or a simple both-side duck tape) for a small box with chip, button and small LCD
+3. Show a number on LCD when was last time triggered (minute countdown)
