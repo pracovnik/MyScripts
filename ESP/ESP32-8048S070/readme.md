@@ -1,6 +1,6 @@
-Got: https://www.aliexpress.com/item/1005004952726089.html?spm=a2g0o.productlist.main.3.340e607aBiYZTX&algo_pvid=d4fbeba8-a6a3-4adb-ba08-1ed71e8c63a6&algo_exp_id=d4fbeba8-a6a3-4adb-ba08-1ed71e8c63a6-1&pdp_npi=4%40dis%21EUR%2125.43%2123.9%21%21%21194.53%21%21%402103237317047488282558872ea149%2112000031135431788%21sea%21SK%210%21AB&curPageLogUid=XUsBR8GVo6tJ&utparam-url=scene%3Asearch%7Cquery_from%3A
+Got: https://www.aliexpress.com/item/1005004952726089.html
 
-Followed for openhasp: firmware and flashing:
+Followed for openhasp firmware for flashing:
 https://www.openhasp.com/0.7.0/hardware/sunton/esp32-8048s0xx/
 
 UI modification:
