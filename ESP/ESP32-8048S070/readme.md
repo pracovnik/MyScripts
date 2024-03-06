@@ -10,18 +10,31 @@ https://www.openhasp.com/0.7.0/integrations/home-assistant/sampl_conf/#dynamical
 
 Did:
 a) Downloaded openhasp for my LCD
+
 b) Downloaded the link on aliexpress
+
 c) Unziped(from b) the flashing files flash_download_tool
+
 d) Flashed the LCD
+
 e) Changed the wifi
+
 f) Assigned a static IP via ISP router
+
 g) (optional) installed a mqtt server + config in HA
+
 h) Setup for LCD: mqtt configuration , credentials for http, time settings, set 0 for idle in display
+
 i) In HA set met.no integration (called home) for my location, note there are hourly and dayly
+
 j) In HA added openhasp integration and LCD detected as device
+
 k) Added to HA's configuration.yaml the path to openhasp.yaml
+
 l) Created the openhasp.yaml config for HA (page+ID reflects to pages.jsonl)
+
 k) Update the LCD's pages.jsonl configuration
+
 j) Setup antiburn scheduler for the LCD, not not burn pixels (see UI modifications)
 .
 will be added soon
