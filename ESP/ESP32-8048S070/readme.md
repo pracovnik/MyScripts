@@ -4,7 +4,7 @@ Followed for openhasp firmware for flashing:
 https://www.openhasp.com/0.7.0/hardware/sunton/esp32-8048s0xx/
 
 UI modification:
-https://www.openhasp.com/0.7.0/integrations/home-assistant/sampl_conf/#dynamically-set-ui-element-dimensions
+https://www.openhasp.com/0.7.0/integrations/home-assistant/sampl_conf/#current-weather-and-forecasts
 
 3rd party: zip of pictures (from page above) for weather icons
 
