@@ -1,0 +1,173 @@
+esp328048s070c:
+  objects:
+    #hour list pictures
+    - obj: "p1b3"
+      properties:
+        "src": "L:/z-32-{{ state_attr('weather.forecast_home_hourly','forecast')[0]['condition'] }}.png"
+    - obj: "p1b6"
+      properties:
+        "src": "L:/z-32-{{ state_attr('weather.forecast_home_hourly','forecast')[1]['condition'] }}.png"
+    - obj: "p1b9"
+      properties:
+        "src": "L:/z-32-{{ state_attr('weather.forecast_home_hourly','forecast')[2]['condition'] }}.png"
+    - obj: "p1b12"
+      properties:
+        "src": "L:/z-32-{{ state_attr('weather.forecast_home_hourly','forecast')[3]['condition'] }}.png"
+    - obj: "p1b40"
+      properties:
+        "src": "L:/z-32-{{ state_attr('weather.forecast_home_hourly','forecast')[4]['condition'] }}.png"
+    - obj: "p1b15"
+      properties:
+        "src": "L:/z-32-{{ state_attr('weather.forecast_home_hourly','forecast')[6]['condition'] }}.png"
+    - obj: "p1b18"
+      properties:
+        "src": "L:/z-32-{{ state_attr('weather.forecast_home_hourly','forecast')[9]['condition'] }}.png"
+
+    #hour list time
+    - obj: "p1b1"
+      properties:
+        "text": "{{ as_timestamp(strptime(state_attr('weather.forecast_home_hourly','forecast')[0]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) | timestamp_custom('%H') + ':' }}"
+    - obj: "p1b4"
+      properties:
+        "text": "{{ as_timestamp(strptime(state_attr('weather.forecast_home_hourly','forecast')[1]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) | timestamp_custom('%H') + ':' }}"
+    - obj: "p1b7"
+      properties:
+        "text": "{{ as_timestamp(strptime(state_attr('weather.forecast_home_hourly','forecast')[2]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) | timestamp_custom('%H') + ':' }}"
+    - obj: "p1b10"
+      properties:
+        "text": "{{ as_timestamp(strptime(state_attr('weather.forecast_home_hourly','forecast')[3]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) | timestamp_custom('%H') + ':' }}"
+    - obj: "p1b38"
+      properties:
+        "text": "{{ as_timestamp(strptime(state_attr('weather.forecast_home_hourly','forecast')[4]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) | timestamp_custom('%H') + ':' }}"
+    - obj: "p1b13"
+      properties:
+        "text": "{{ as_timestamp(strptime(state_attr('weather.forecast_home_hourly','forecast')[6]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) | timestamp_custom('%H') + ':' }}"
+    - obj: "p1b16"
+      properties:
+        "text": "{{ as_timestamp(strptime(state_attr('weather.forecast_home_hourly','forecast')[9]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) | timestamp_custom('%H') + ':' }}"
+
+    #hour list temperature
+    - obj: "p1b2" # Forecast temp +1h
+      properties:
+        "text": "{{ state_attr('weather.forecast_home_hourly','forecast')[0]['temperature'] |string + '°C' if not is_state('weather.forecast_home_hourly','unavailable') else '##°C' }}"
+    - obj: "p1b5" # Forecast temp +1h
+      properties:
+        "text": "{{ state_attr('weather.forecast_home_hourly','forecast')[1]['temperature'] |string + '°C' if not is_state('weather.forecast_home_hourly','unavailable') else '##°C' }}"
+    - obj: "p1b8" # Forecast temp +1h
+      properties:
+        "text": "{{ state_attr('weather.forecast_home_hourly','forecast')[2]['temperature'] |string + '°C' if not is_state('weather.forecast_home_hourly','unavailable') else '##°C' }}"
+    - obj: "p1b11" # Forecast temp +1h
+      properties:
+        "text": "{{ state_attr('weather.forecast_home_hourly','forecast')[3]['temperature'] |string + '°C' if not is_state('weather.forecast_home_hourly','unavailable') else '##°C' }}"
+    - obj: "p1b39" # Forecast temp +1h
+      properties:
+        "text": "{{ state_attr('weather.forecast_home_hourly','forecast')[4]['temperature'] |string + '°C' if not is_state('weather.forecast_home_hourly','unavailable') else '##°C' }}"
+    - obj: "p1b14" # Forecast temp +1h
+      properties:
+        "text": "{{ state_attr('weather.forecast_home_hourly','forecast')[6]['temperature'] |string + '°C' if not is_state('weather.forecast_home_hourly','unavailable') else '##°C' }}"
+    - obj: "p1b17" # Forecast temp +1h
+      properties:
+        "text": "{{ state_attr('weather.forecast_home_hourly','forecast')[9]['temperature'] |string + '°C' if not is_state('weather.forecast_home_hourly','unavailable') else '##°C' }}"
+     #biginfo
+    - obj: "p1b20"
+      properties:
+        "text": "{{ now().timestamp() | timestamp_custom('%H:%M') }}"
+    - obj: "p1b21" # Current temp (you can use your own outdoor temp sensor if you have one)
+      properties:
+        "text": "{{ state_attr('weather.forecast_home','temperature') | string + '°C' }}"
+    - obj: "p1b22" # Icon
+      properties:
+        "src": "L:/z-128-{{ state_attr('weather.forecast_home','forecast','condition') }}.png"
+     #Now info pod big info
+    - obj: "p1b23"
+      properties:
+        "text": "{{ states('sensor.openweathermaprajec_feels_like_temperature') | string + '°C' }}"
+    - obj: "p1b24"
+      properties:
+        "text": "{{ state_attr('weather.forecast_home','humidity') | string + '%' }}"
+    - obj: "p1b25"
+      properties:
+        "text": "{{ state_attr('weather.forecast_home','wind_speed') | string + 'km/h' }}"
+     #daily report
+    - obj: "p1b26" # Forecast date +4d
+      properties:
+        "text": >
+          {%- if not is_state('weather.forecast_home','unavailable') %}
+          {%- set now1 = as_timestamp(strptime(state_attr('weather.forecast_home','forecast')[0]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) %}
+          {%- set day = now1 | timestamp_custom("%w") %}
+          {%- set days = ["Pondelok", "Utorok", "Streda", "Stvrtok", "Piatok", "Sobota", "Nedela"] %}
+          {{ days[ day | int -1 ] }}{{ now1 | timestamp_custom(" %d") }}
+          {%- endif %}
+    - obj: "p1b27" # Forecast temp max +4d
+      properties:
+        "text": "{{ state_attr('weather.forecast_home','forecast')[0]['temperature'] | string + '°C' }}"
+
+    - obj: "p1b28" # Forecast condition +4d
+      properties:
+        "src": >
+          {%- if not is_state('weather.forecast_home','unavailable') %}
+          L:/z-32-{{ state_attr('weather.forecast_home','forecast')[0]['condition'] }}.png
+          {%- endif %}
+    - obj: "p1b29" # Forecast date +4d
+      properties:
+        "text": >
+          {%- if not is_state('weather.forecast_home','unavailable') %}
+          {%- set now1 = as_timestamp(strptime(state_attr('weather.forecast_home','forecast')[1]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) %}
+          {%- set day = now1 | timestamp_custom("%w") %}
+          {%- set days = ["Pondelok", "Utorok", "Streda", "Stvrtok", "Piatok", "Sobota", "Nedela"] %}
+          {{ days[ day | int -1 ] }}{{ now1 | timestamp_custom(" %d") }}
+          {%- endif %}
+    - obj: "p1b30" # Forecast temp max +4d
+      properties:
+        "text": "{{ state_attr('weather.forecast_home','forecast')[1]['temperature'] | string + '°C' }}"
+    - obj: "p1b31" # Forecast condition +4d
+      properties:
+        "src": >
+          {%- if not is_state('weather.forecast_home','unavailable') %}
+          L:/z-32-{{ state_attr('weather.forecast_home','forecast')[1]['condition'] }}.png
+          {%- endif %}
+    - obj: "p1b32" # Forecast date +4d
+      properties:
+        "text": >
+          {%- if not is_state('weather.forecast_home','unavailable') %}
+          {%- set now1 = as_timestamp(strptime(state_attr('weather.forecast_home','forecast')[2]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) %}
+          {%- set day = now1 | timestamp_custom("%w") %}
+          {%- set days = ["Pondelok", "Utorok", "Streda", "Stvrtok", "Piatok", "Sobota", "Nedela"] %}
+          {{ days[ day | int -1 ] }}{{ now1 | timestamp_custom(" %d") }}
+          {%- endif %}
+    - obj: "p1b33" # Forecast temp max +4d
+      properties:
+        "text": "{{ state_attr('weather.forecast_home','forecast')[2]['temperature'] | string + '°C' }}"
+    - obj: "p1b34" # Forecast condition +4d
+      properties:
+        "src": >
+          {%- if not is_state('weather.forecast_home','unavailable') %}
+          L:/z-32-{{ state_attr('weather.forecast_home','forecast')[2]['condition'] }}.png
+          {%- endif %}
+    - obj: "p1b35" # Forecast date +4d
+      properties:
+        "text": >
+          {%- if not is_state('weather.forecast_home','unavailable') %}
+          {%- set now1 = as_timestamp(strptime(state_attr('weather.forecast_home','forecast')[3]['datetime'], '%Y-%m-%dT%H:%M:%S%z', default='2020-01-01T00:00:00+00:00')) %}
+          {%- set day = now1 | timestamp_custom("%w") %}
+          {%- set days = ["Pondelok", "Utorok", "Streda", "Stvrtok", "Piatok", "Sobota", "Nedela"] %}
+          {{ days[ day | int -1 ] }}{{ now1 | timestamp_custom(" %d") }}
+          {%- endif %}
+
+    - obj: "p1b36" # Forecast temp max +4d
+      properties:
+        "text": "{{ state_attr('weather.forecast_home','forecast')[3]['temperature'] | string + '°C' }}"
+
+    - obj: "p1b37" # Forecast condition +4d
+      properties:
+        "src": >
+          {%- if not is_state('weather.forecast_home','unavailable') %}
+          L:/z-32-{{ state_attr('weather.forecast_home','forecast')[3]['condition'] }}.png
+          {%- endif %}
+
+    # webcam
+    - obj: "p2b100" # Icon
+      properties:
+        "src": "http://192.168.1.102:8080/snapshot"
+
+
