@@ -13,7 +13,7 @@ http://pan.jczn1688.com/directlink/1/ESP32%20module/7.0inch_ESP32-8048S070.zip
 
 Did:
 
-a) Downloaded openhasp firmware for my LCD, note I have c version
+a) Downloaded openhasp firmware for my LCD, note I have touchscreen version
 
 b) Downloaded the link for examples on aliexpress page of the product
 
