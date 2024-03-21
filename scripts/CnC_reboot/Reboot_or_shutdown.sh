@@ -9,4 +9,5 @@ fi
 if [[ $(echo "$wwww" | grep "turnoff" | wc -l)+$(echo "$wwww" | grep "shutdown" | wc -l) == "1+1" ]] ;
 then
         echo "yes shutdown"
+        sudo /sbin/shutdown
 fi
