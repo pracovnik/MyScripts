@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+
+import sqlite3
+
+
+DBconnection = sqlite3.connect("/var/www/sqlite3/network.sqlite3")
+query1="update NETWORKDEVICES set inreports='n' , owner='Me', devicename='VirtualBOX_debian' , comment='Linux for printer' where macaddress='4C:A1:3B:FF:1R:9A' ";
+
+#query1="insert into NETWORKDEVICES (macaddress , lastseen , devicename, inreports ) VALUES ('4C:A1:3B:FF:1R:9A', CURRENT_TIMESTAMP ,'VirtualBOX_debian','y' )";
+
+
+
+DBconnection.execute(query1)
+DBconnection.commit()
+
+DBconnection.close()
+
