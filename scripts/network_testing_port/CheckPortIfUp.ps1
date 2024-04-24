@@ -26,3 +26,5 @@ do
 }
 while ($disconnected)
 
+write-host "Done, click any key"
+Read-Host
