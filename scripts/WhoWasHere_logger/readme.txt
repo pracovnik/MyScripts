@@ -23,3 +23,9 @@ Screenshot show how it look on generated website, whereas the number show how ma
 13|26|23 <- usually device use wake-sleep method or just is and is not here
 
 
+Purpose or why was it created:
+- Be able to tell when we left home/returned (count duration)
+- When was someone visiting us (and knows wifi)
+- When a device went off, Children turn off TV
+- When child arrived and be able to check it remotly
+- Detect new devices on network
