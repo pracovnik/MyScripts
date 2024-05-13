@@ -1,7 +1,6 @@
 Picon is  Raspberry Zero 1 wh , that I had no use for. So I added it to my 3D printer as second web camera. Is powered only when 3D printer is.
 
 
-
 What is on it:
 
 - Connected LED strip via gpio
@@ -18,6 +17,9 @@ What is on it:
 
 - Ustreamer to stream the content from the rpi camera
 
+.
+
+![Alt text](/scripts/picon/All-in-one.jpg?raw=true "Optional Title")
 
 .
 
