@@ -1,2 +1,3 @@
-I have a VPS hosted in a data center. This script is run on a raspberryPI located at my parent's home. It is connecting to my VPN(static IP) using ssh. Configuration of ssh also created a RemoteForward tunnel.
-Via this tunnel I can connect from VPS to the raspberryPI to do some activities there. Script is set to recover if the ssh route is not working.
+I have a VPS hosted in a data center. This script is run on a RaspberryPI located at various places (parent, my home, cottage ...)
+Client devices conneto to my VPS via ssh and configuration of ssh also created a RemoteForward tunnel.
+Via this ssh tunnel I can connect from VPS to the RaspberryPI to do some activities there. Script is set to recover, if the ssh route is not working, which helps when disturbed.
