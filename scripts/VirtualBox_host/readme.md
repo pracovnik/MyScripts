@@ -12,3 +12,7 @@ Requirements:
 - Enought free space (adjustable)
 - Enought CPU (adjustable)
 -  
+
+
+
+Reason was, that sometimes I needed a Windows OS to perform or test some things.
