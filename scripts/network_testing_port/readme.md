@@ -1,6 +1,6 @@
 This script is more related to work.
 
-When I do a reboot or restart of machine/software, I want to know when it is up (when started). 
+When I do a reboot or restart of machine/software, I want to know when it is up (when a service is ready with open port). 
 So this is just a simple script that run a cycle, that check regularly IP:port if is open. If open it hold and wait for user's input(key press).
 
 
